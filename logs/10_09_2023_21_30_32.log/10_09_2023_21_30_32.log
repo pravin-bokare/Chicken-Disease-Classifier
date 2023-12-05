@@ -1,0 +1,61 @@
+[ 2023-10-09 21:30:33,407 ] 30 cnnClassifierLogger - INFO - yaml file: F:\iNeuron\DL Projects\Chicken Disease Classification\config\config.yaml loaded successfully
+[ 2023-10-09 21:30:33,413 ] 30 cnnClassifierLogger - INFO - yaml file: F:\iNeuron\DL Projects\Chicken Disease Classification\params.yaml loaded successfully
+[ 2023-10-09 21:30:33,421 ] 21 cnnClassifierLogger - INFO - >>>>>> stage Data Ingestion stage started <<<<<<
+[ 2023-10-09 21:31:17,784 ] 26 cnnClassifierLogger - ERROR - <urlopen error [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond>
+Traceback (most recent call last):
+  File "C:\Users\pravin\AppData\Local\Programs\Python\Python310\lib\urllib\request.py", line 1348, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "C:\Users\pravin\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 1276, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\pravin\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 1322, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\pravin\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 1271, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\pravin\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 1031, in _send_output
+    self.send(msg)
+  File "C:\Users\pravin\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 969, in send
+    self.connect()
+  File "C:\Users\pravin\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 1441, in connect
+    super().connect()
+  File "C:\Users\pravin\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 940, in connect
+    self.sock = self._create_connection(
+  File "C:\Users\pravin\AppData\Local\Programs\Python\Python310\lib\socket.py", line 845, in create_connection
+    raise err
+  File "C:\Users\pravin\AppData\Local\Programs\Python\Python310\lib\socket.py", line 833, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\iNeuron\DL Projects\Chicken Disease Classification\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 23, in <module>
+    obj.main()
+  File "F:\iNeuron\DL Projects\Chicken Disease Classification\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 13, in main
+    data_ingestion.download_file()
+  File "F:\iNeuron\DL Projects\Chicken Disease Classification\src\cnnClassifier\components\data_ingestion.py", line 28, in download_file
+    filename, headers = request.urlretrieve(
+  File "C:\Users\pravin\AppData\Local\Programs\Python\Python310\lib\urllib\request.py", line 241, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+  File "C:\Users\pravin\AppData\Local\Programs\Python\Python310\lib\urllib\request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\pravin\AppData\Local\Programs\Python\Python310\lib\urllib\request.py", line 525, in open
+    response = meth(req, response)
+  File "C:\Users\pravin\AppData\Local\Programs\Python\Python310\lib\urllib\request.py", line 634, in http_response
+    response = self.parent.error(
+  File "C:\Users\pravin\AppData\Local\Programs\Python\Python310\lib\urllib\request.py", line 557, in error
+    result = self._call_chain(*args)
+  File "C:\Users\pravin\AppData\Local\Programs\Python\Python310\lib\urllib\request.py", line 496, in _call_chain
+    result = func(*args)
+  File "C:\Users\pravin\AppData\Local\Programs\Python\Python310\lib\urllib\request.py", line 749, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "C:\Users\pravin\AppData\Local\Programs\Python\Python310\lib\urllib\request.py", line 519, in open
+    response = self._open(req, data)
+  File "C:\Users\pravin\AppData\Local\Programs\Python\Python310\lib\urllib\request.py", line 536, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "C:\Users\pravin\AppData\Local\Programs\Python\Python310\lib\urllib\request.py", line 496, in _call_chain
+    result = func(*args)
+  File "C:\Users\pravin\AppData\Local\Programs\Python\Python310\lib\urllib\request.py", line 1391, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+  File "C:\Users\pravin\AppData\Local\Programs\Python\Python310\lib\urllib\request.py", line 1351, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond>

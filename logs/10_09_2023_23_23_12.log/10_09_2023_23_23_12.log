@@ -1,0 +1,14 @@
+[ 2023-10-09 23:23:13,785 ] 30 cnnClassifierLogger - INFO - yaml file: F:\iNeuron\DL Projects\Chicken Disease Classification\config\config.yaml loaded successfully
+[ 2023-10-09 23:23:13,795 ] 30 cnnClassifierLogger - INFO - yaml file: F:\iNeuron\DL Projects\Chicken Disease Classification\params.yaml loaded successfully
+[ 2023-10-09 23:23:13,806 ] 21 cnnClassifierLogger - INFO - >>>>>> stage Data Ingestion stage started <<<<<<
+[ 2023-10-09 23:23:13,807 ] 26 cnnClassifierLogger - ERROR - [Errno 2] No such file or directory: 'F:\\iNeuron\\DL Projects\\Chicken Disease Classification\\artifacts/data_ingestion/data.zip'
+Traceback (most recent call last):
+  File "F:\iNeuron\DL Projects\Chicken Disease Classification\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 23, in <module>
+    obj.main()
+  File "F:\iNeuron\DL Projects\Chicken Disease Classification\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 14, in main
+    data_ingestion.extract_zip_file()
+  File "F:\iNeuron\DL Projects\Chicken Disease Classification\src\cnnClassifier\components\data_ingestion.py", line 45, in extract_zip_file
+    with zipfile.ZipFile(self.data_ingestion_config.local_data, 'r') as zip_ref:
+  File "C:\Users\pravin\AppData\Local\Programs\Python\Python310\lib\zipfile.py", line 1240, in __init__
+    self.fp = io.open(file, filemode)
+FileNotFoundError: [Errno 2] No such file or directory: 'F:\\iNeuron\\DL Projects\\Chicken Disease Classification\\artifacts/data_ingestion/data.zip'

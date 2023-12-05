@@ -1,0 +1,24 @@
+[ 2023-10-09 21:29:03,758 ] 30 cnnClassifierLogger - INFO - yaml file: F:\iNeuron\DL Projects\Chicken Disease Classification\config\config.yaml loaded successfully
+[ 2023-10-09 21:29:03,786 ] 30 cnnClassifierLogger - INFO - yaml file: F:\iNeuron\DL Projects\Chicken Disease Classification\params.yaml loaded successfully
+[ 2023-10-09 21:29:03,797 ] 21 cnnClassifierLogger - INFO - >>>>>> stage Data Ingestion stage started <<<<<<
+[ 2023-10-09 21:29:03,799 ] 26 cnnClassifierLogger - ERROR - <urlopen error unknown url type: f>
+Traceback (most recent call last):
+  File "F:\iNeuron\DL Projects\Chicken Disease Classification\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 23, in <module>
+    obj.main()
+  File "F:\iNeuron\DL Projects\Chicken Disease Classification\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 13, in main
+    data_ingestion.download_file()
+  File "F:\iNeuron\DL Projects\Chicken Disease Classification\src\cnnClassifier\components\data_ingestion.py", line 28, in download_file
+    filename, headers = request.urlretrieve(
+  File "C:\Users\pravin\AppData\Local\Programs\Python\Python310\lib\urllib\request.py", line 241, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+  File "C:\Users\pravin\AppData\Local\Programs\Python\Python310\lib\urllib\request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\pravin\AppData\Local\Programs\Python\Python310\lib\urllib\request.py", line 519, in open
+    response = self._open(req, data)
+  File "C:\Users\pravin\AppData\Local\Programs\Python\Python310\lib\urllib\request.py", line 541, in _open
+    return self._call_chain(self.handle_open, 'unknown',
+  File "C:\Users\pravin\AppData\Local\Programs\Python\Python310\lib\urllib\request.py", line 496, in _call_chain
+    result = func(*args)
+  File "C:\Users\pravin\AppData\Local\Programs\Python\Python310\lib\urllib\request.py", line 1419, in unknown_open
+    raise URLError('unknown url type: %s' % type)
+urllib.error.URLError: <urlopen error unknown url type: f>

@@ -1,0 +1,16 @@
+[ 2023-10-09 23:23:24,398 ] 30 cnnClassifierLogger - INFO - yaml file: F:\iNeuron\DL Projects\Chicken Disease Classification\config\config.yaml loaded successfully
+[ 2023-10-09 23:23:24,404 ] 30 cnnClassifierLogger - INFO - yaml file: F:\iNeuron\DL Projects\Chicken Disease Classification\params.yaml loaded successfully
+[ 2023-10-09 23:23:24,411 ] 21 cnnClassifierLogger - INFO - >>>>>> stage Data Ingestion stage started <<<<<<
+[ 2023-10-09 23:23:26,015 ] 26 cnnClassifierLogger - ERROR - File is not a zip file
+Traceback (most recent call last):
+  File "F:\iNeuron\DL Projects\Chicken Disease Classification\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 23, in <module>
+    obj.main()
+  File "F:\iNeuron\DL Projects\Chicken Disease Classification\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 14, in main
+    data_ingestion.extract_zip_file()
+  File "F:\iNeuron\DL Projects\Chicken Disease Classification\src\cnnClassifier\components\data_ingestion.py", line 45, in extract_zip_file
+    with zipfile.ZipFile(self.data_ingestion_config.local_data, 'r') as zip_ref:
+  File "C:\Users\pravin\AppData\Local\Programs\Python\Python310\lib\zipfile.py", line 1258, in __init__
+    self._RealGetContents()
+  File "C:\Users\pravin\AppData\Local\Programs\Python\Python310\lib\zipfile.py", line 1325, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
